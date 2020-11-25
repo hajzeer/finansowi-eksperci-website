@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Finansowi Eksperci | Twoje wsparcie w oddłużeniu`,
+    title: `Eksperci Finansowi | Twoje wsparcie w oddłużeniu`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
