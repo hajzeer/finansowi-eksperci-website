@@ -1,0 +1,56 @@
+.container {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #ffffff;
+
+}
+
+.container__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.button {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.span::after, .span::before {
+    content: '';
+    position: absolute;
+    margin: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    background-color: #000;
+}
+
+.span::after {
+    transform: rotate(45deg);
+}
+.span::before {
+    transform: rotate(-45deg);
+}
+
+.text {
+    font-size: 12px;
+}

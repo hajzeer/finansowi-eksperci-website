@@ -1,0 +1,34 @@
+.section__outer {
+    width: 100%;
+    margin: 40px 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.text__style {
+    margin: 30px;
+    align-self: flex-start;
+
+}
+
+.img {
+    width: 250px;
+    height: 250px;
+    background: black;
+
+    align-self: flex-end;
+}
+.text__style2 {
+    margin: 30px;
+    align-self: flex-end;
+
+}
+
+.img2 {
+    width: 250px;
+    height: 250px;
+    background: black;
+
+    align-self: flex-start;
+}
