@@ -17,3 +17,14 @@
 .subject {
     margin: 20px;
 }
+
+@media (min-width: 1024px) {
+    .subject {
+        font-size: 45px;
+        margin: 100px;
+    }
+    .text__container {
+
+    }
+
+}

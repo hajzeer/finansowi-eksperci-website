@@ -20,7 +20,7 @@ const Hero = () => {
 
     return (
             <BackgroundImage className={styles.container} fluid={data.file.childImageSharp.fluid}>
-                <h1 className={styles.subject}>Twój doradca kredytowy</h1>
+                <h1 className={styles.subject}>Od oddłużania do normalności</h1>
             </BackgroundImage>
 
     )

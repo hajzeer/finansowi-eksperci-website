@@ -45,4 +45,19 @@
     border: none;
     text-decoration: underline;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .subject {
+        font-size: 45px;
+    }
+    .text__container {
+        font-size: 25px;
+        margin: 100px;
+    }
+    .img, .img2 {
+        width: 400px;
+        height: 400px;
+    }
 }

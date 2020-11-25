@@ -19,9 +19,10 @@ const Modal = ({visibility, unActive}) => {
     let outerSection = useRef(null)
     let innerSection = useRef(null)
 
+
     useEffect(() => {
-        const tl = gsap.timeline()
         if(visibility.clicked === false) {
+
             gsap.fromTo(innerSection,
                 {opacity: 1, y: 0},
                 {

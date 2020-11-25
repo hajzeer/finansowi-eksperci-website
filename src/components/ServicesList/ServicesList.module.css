@@ -32,3 +32,21 @@
 
     align-self: flex-start;
 }
+
+@media (min-width: 1024px) {
+    .section__outer {
+        flex-direction: row;
+    }
+    .section__outer--media {
+        flex-direction: row-reverse;
+    }
+    .text__style, .text__style2 {
+        align-self: center;
+        font-size: 30px;
+        margin-left: 100px;
+    }
+    .img2, .img {
+        width: 400px;
+        height: 400px;
+    }
+}

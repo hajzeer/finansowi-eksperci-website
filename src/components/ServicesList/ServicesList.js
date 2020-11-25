@@ -9,15 +9,15 @@ const ServicesList = ({items}) => (
         if (id % 2 === 0) {
             return (
             <section className={styles.section__outer} key={id}>
-                <h3 className={styles.text__style}>{name}</h3>
                 <img className={styles.img}/>
+                <h3 className={styles.text__style}>{name}</h3>
             </section>
             )
         } else {
             return (
-                <section className={styles.section__outer} key={id}>
-                <h3 className={styles.text__style2}>{name}</h3>
+                <section className={`${styles.section__outer} ${styles.section__outerMedia}`} key={id}>
                 <img className={styles.img2}/>
+                <h3 className={styles.text__style2}>{name}</h3>
             </section>
             )
         }}))
