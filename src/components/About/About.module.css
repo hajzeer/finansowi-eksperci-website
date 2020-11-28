@@ -6,6 +6,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .img {
@@ -47,6 +49,14 @@
     letter-spacing: 1px;
     cursor: pointer;
 }
+
+.short__text {
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
 
 @media (min-width: 1024px) {
     .subject {

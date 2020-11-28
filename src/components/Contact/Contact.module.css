@@ -8,6 +8,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .input {
@@ -16,21 +18,37 @@
     height: 20px;
     background: transparent;
     color: #000;
-    border-color: #000000;
     border: none;
-    border-bottom: 3px solid;
+    border-bottom: 3px solid #1a1a1a;
     margin: 15px;
 }
+
+.input:focus {
+     outline: none;
+
+     -webkit-appearance: none;
+     -webkit-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+     -moz-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+     box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+ }
 
 .textarea {
     width: 80%;
     font-size: 15px;
     height: 100px;
     color: #1a1a1a;
-    border-color: #000000;
-    border-size: 3px solid;
+    border: 3px solid #1a1a1a;
     resize: none;
     margin-top: 20px;
+}
+
+.textarea:focus {
+    outline: none;
+
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+    -moz-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+    box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
 }
 
 .button {
@@ -39,8 +57,7 @@
     height: 20px;
     border-radius: 25px;
     background-color: #1a1a1a;
-    border-color: #1a1a1a;
-    border-size: 40px solid;
+    border: 4px solid #1a1a1a;
     cursor: pointer;
     font-size: 15px;
     color: #FFFFFF;
@@ -48,4 +65,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.button:active {
+    animation: zoomer 1s ease-in-out;
+}
+
+@keyframes zoomer {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

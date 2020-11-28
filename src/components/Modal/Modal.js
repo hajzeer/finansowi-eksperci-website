@@ -30,7 +30,7 @@ const Modal = ({visibility, unActive}) => {
                 })
 
             gsap.to(outerSection, {duration: 1, delay: .5, height: 0, ease: 'Power4.easeOut', stagger: {amount: 0.7}})
-            gsap.to(outerSection, {duration: 2, css:{display:'none'} })
+            gsap.to(outerSection, {duration: 1, css:{display:'none'} })
 
         } else if(visibility.clicked === true ||
             (visibility.clicked === true && visibility.initial === null)) {

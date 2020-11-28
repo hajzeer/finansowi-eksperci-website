@@ -11,7 +11,7 @@ const data = useStaticQuery(
             query {
                 file(relativePath: { eq: "logo.png" }) {
                     childImageSharp {
-                        fluid {
+                        fluid(maxWidth: 400) {
                             ...GatsbyImageSharpFluid
                         }
                     }

@@ -1,9 +1,31 @@
 import React, {useState} from "react";
 import styles from "./About.module.css"
+import {graphql, useStaticQuery} from "gatsby";
+import Img from "gatsby-image"
 
 import Modal from "../Modal/Modal"
 
 const About = () => {
+    const data = useStaticQuery(
+        graphql`
+            query {
+                image1: file(relativePath: { eq: "image1.jpg" }) {
+                    childImageSharp {
+                        fluid(maxWidth: 400) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                image2: file(relativePath: { eq: "image2.jpg" }) {
+                    childImageSharp {
+                        fluid(maxWidth: 400, quality: 100) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        `
+    )
 
 
     const [isVisible, setIsVisible] = useState({
@@ -30,7 +52,7 @@ const About = () => {
     return(
         <section className={styles.container}>
                 <Modal visibility={isVisible} unActive={handleVisibility}/>
-                <img className={styles.img}/>
+                <Img className={styles.img} fluid={data.image2.childImageSharp.fluid}/>
             <div className={styles.text__container}>
                 <h2 className={styles.subject}>Kim jesteśmy?</h2>
                 <p>
@@ -41,7 +63,10 @@ const About = () => {
                 </p>
                 <button onClick={handleVisibility} className={styles.button}>czytaj więcej</button>
             </div>
-            <img className={styles.img2}/>
+            <Img className={styles.img2} fluid={data.image1.childImageSharp.fluid}/>
+            <p className={styles.short__text}>
+                Od wielu lat z powodzeniem funkcjonujemy na tym rynku
+            </p>
         </section>
     )
 }
