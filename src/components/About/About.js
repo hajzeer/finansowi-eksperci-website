@@ -52,7 +52,7 @@ const About = () => {
     return(
         <section className={styles.container}>
                 <Modal visibility={isVisible} unActive={handleVisibility}/>
-                <Img className={styles.img} fluid={data.image2.childImageSharp.fluid}/>
+
             <div className={styles.text__container}>
                 <h2 className={styles.subject}>Kim jesteśmy?</h2>
                 <p>
@@ -67,6 +67,7 @@ const About = () => {
             <p className={styles.short__text}>
                 Od wielu lat z powodzeniem funkcjonujemy na tym rynku
             </p>
+            <Img className={styles.img} fluid={data.image2.childImageSharp.fluid}/>
         </section>
     )
 }

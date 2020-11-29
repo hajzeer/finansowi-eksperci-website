@@ -13,7 +13,7 @@
 .img {
     width: 250px;
     height: 250px;
-    background: black;
+    background: #1a1a1a;
 
     align-self: flex-end;
 }
@@ -21,7 +21,7 @@
 .img2 {
     width: 250px;
     height: 250px;
-    background: black;
+    background: #1a1a1a;
 
     align-self: flex-start;
 }
@@ -48,6 +48,7 @@
     text-decoration: underline;
     letter-spacing: 1px;
     cursor: pointer;
+    color: #1a1a1a;
 }
 
 .short__text {
@@ -67,7 +68,11 @@
         margin: 100px;
     }
     .img, .img2 {
-        width: 400px;
-        height: 400px;
+        width: 600px;
+        height: auto;
+    }
+    .short__text {
+        margin: 50px;
+        font-size: 40px;
     }
 }

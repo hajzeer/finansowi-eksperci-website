@@ -3,6 +3,7 @@ import {graphql, useStaticQuery} from "gatsby"
 
 import styles from "./services.module.css"
 import ServicesList from "../ServicesList/ServicesList";
+import Img from "gatsby-image";
 
 
 const services = [
@@ -30,9 +31,16 @@ const Services = () => {
     const data = useStaticQuery(
         graphql`
             query {
-                file(relativePath: { eq: "image1.jpg" }) {
+                image1: file(relativePath: { eq: "services/image1.jpg" }) {
                     childImageSharp {
-                        fluid{
+                        fluid(maxWidth: 400) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                image2: file(relativePath: { eq: "services/image2.jpg" }) {
+                    childImageSharp {
+                        fluid(maxWidth: 400, quality: 100) {
                             ...GatsbyImageSharpFluid
                         }
                     }
@@ -41,13 +49,17 @@ const Services = () => {
         `
     )
 
-
     return (
         <section className={styles.container}>
             <div className={styles.text__container}>
                 <h2 className={styles.subject}>W czym Ci pomożemy?</h2>
-                <ServicesList items={services} image={data.file}/>
+
+                <ServicesList items={services}/>
             </div>
+            <Img className={styles.img2} fluid={data.image2.childImageSharp.fluid}/>
+            <p className={styles.short__text}>
+                Naszym celem było i jest, aby Klient nie tylko miał jedną ratę, ale żeby wrócił na normalne tory, aby był postrzegany przez inne Banki czy Skoki jak pełnoprawny obywatel.
+            </p>
         </section>
     )
 }
