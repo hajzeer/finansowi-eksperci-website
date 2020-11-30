@@ -130,4 +130,7 @@
     .button {
         width: 40%;
     }
+    .input, .textarea {
+        width: 60%;
+    }
 }
