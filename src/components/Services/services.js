@@ -8,22 +8,22 @@ import Img from "gatsby-image";
 
 const services = [
     {
-        id: 0, name: 'Wsparcie w oddłużaniu'
+        id: 0, name: 'Pożyczka oddłużeniowa SKOK pod zastaw nieruchomości (dom, mieszkanie, działka) do kwoty 200.000 zł'
     },
     {
-        id: 1, name: 'Kredyt na spłatę parrabanków'
+        id: 1, name: 'Akceptujemy wpisy w bazach BIK, BIG, KRD'
     },
     {
-        id: 2, name: 'Pomoc przy problemach spłacie aktualnych zobowiązań'
+        id: 2, name: 'Komornik i bieżące zaległości w BIK nie stanowią problemu'
     },
     {
-        id: 3, name: 'Bez opłat wstępnych, wraz z szybką decyzją i wysoką skutecznością'
+        id: 3, name: 'Spłacimy kredyty bankowe, chwilówki, pożyczki prywatne, pozabankowe, nawet jeśli są już wypowiedziane i sprawa jest u komornika'
     },
     {
-        id: 4, name: 'Nawet do 200 tysięcy na 120 mięsięcy dla Ciebie'
+        id: 4, name: 'Nie pobieramy opłat wstępnych'
     },
     {
-        id: 5, name: 'Akceptujemy zaległości powyżej 90 dni'
+        id: 5, name: 'Oprocentowanie pożyczki Skok: 7,5% w skali roku, maksymalny okres kredytowania: 120 miesięcy'
     },
 ]
 
@@ -52,7 +52,10 @@ const Services = () => {
     return (
         <section className={styles.container}>
             <div className={styles.text__container}>
-                <h2 className={styles.subject}>W czym Ci pomożemy?</h2>
+                <h2 className={styles.subject}>
+                    Oferujemy pożyczki oddłużeniowe we współpracy z
+                    naszym partnerem czyli Kasą SKOK:
+                </h2>
 
                 <ServicesList items={services}/>
             </div>
